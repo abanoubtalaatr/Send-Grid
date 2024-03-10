@@ -17,7 +17,8 @@ There are two ways to integrate:
 1. Visit the official [SendGrid website](https://sendgrid.com/en-us).
 2. Navigate to [Sender Authentication](https://app.sendgrid.com/settings/sender_auth/senders).
 3. Click "Create new Sender," complete all requirements, and ensure you provide a valid email for verification. Save the API key generated during this process.
-4. Set the following variables in your `.env` file:
+4. Delete any configuration for email if exists.
+5. Set the following variables in your `.env` file:
     - `MAIL_FROM_ADDRESS`
     - `MAIL_FROM_NAME`
     - `SENDGRID_API_KEY`
