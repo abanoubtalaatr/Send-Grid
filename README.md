@@ -54,7 +54,7 @@ class SendGridService
         $this->email->setFrom(env("MAIL_FROM_ADDRESS"), env("MAIL_FROM_NAME"));
         $this->email->setSubject($subject);
         $this->email->addTo($to);
-        $this->email->addContent("text/html", view($viewPath, $data)->render());
+        $this->email->addContent("text/html", view($viewPath, compact('data'))->render());
         
         $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
         $sendgrid->send($this->email);
